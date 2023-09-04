@@ -28,7 +28,7 @@ client.on('messageCreate', async (message) => {
     }
 
     //ELIMINACIÓN DE MALSONANTES
-    const insultos = ['mierda', 'mierdas', 'mierdon', 'Mierda', 'Mierdas', 'Mierdon', 'capullo', 'capullos', 'capullas', 'capulla', 'Capullo', 'Capulla', 'Capullos', 'Capullas', 'jilipollas', 'Jilipollas', 'cabron', 'cabrón', 'cabrones', 'Cabron', 'Cabrón', 'Cabrones', 'puta', 'putas', 'puto', 'putos', 'Putas', 'Putos', 'Puta', 'Puto', 'zorra', 'zorras', 'Zorra', 'Zorras', 'polla', 'pollon', 'pollón', 'pollas', 'Polla', 'Pollon', 'Pollón', 'Pollas', 'cabronazo', 'Cabronazo', 'cabronazos', 'Cabronazos', 'cabrona', 'Cabrona', 'cabronas', 'Cabronas'];
+    const insultos = ['mierda', 'mierdas', 'mierdon', 'capullo', 'capullos', 'capullas', 'capulla', 'jilipollas', 'cabron', 'cabrón', 'cabrones', 'puta', 'putas', 'puto', 'putos', 'zorra', 'zorras', 'polla', 'pollon', 'pollón', 'pollas', 'cabronazo', 'cabronazos', 'cabrona', 'cabronas','jilipolleces', 'jilipollez', 'coño', 'coños', 'cojon', 'cojón', 'cojones'];
     for (i = 0; i < insultos.length; i++) {
         if (message.content.toLowerCase().includes(insultos[i])) {
             message.channel.send({ content: `${message.author}, por favor no escribas ese tipo de groserías` })

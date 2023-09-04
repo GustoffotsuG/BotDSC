@@ -28,7 +28,7 @@ client.on('messageCreate', async (message) => {
     }
 
     //ELIMINACIÓN DE MALSONANTES
-    const insultos = ['mierda', 'mierdas', 'mierdon', 'capullo', 'capullos', 'capullas', 'capulla', 'jilipollas', 'cabron', 'cabrón', 'cabrones', 'puta', 'putas', 'puto', 'putos', 'zorra', 'zorras', 'polla', 'pollon', 'pollón', 'pollas', 'cabronazo', 'cabronazos', 'cabrona', 'cabronas','jilipolleces', 'jilipollez', 'coño', 'coños', 'cojon', 'cojón', 'cojones', 'joder', 'joderia', 'jodería'];
+    const insultos = ['mierda', 'mierdas', 'mierdon', 'capullo', 'capullos', 'capullas', 'capulla', 'jilipollas', 'cabron', 'cabrón', 'cabrones', 'puta', 'putas', 'puto', 'putos', 'zorra', 'zorras', 'polla', 'pollon', 'pollón', 'pollas', 'cabronazo', 'cabronazos', 'cabrona', 'cabronas', 'jilipolleces', 'jilipollez', 'coño', 'coños', 'cojon', 'cojón', 'cojones', 'joder', 'joderia', 'jodería'];
     for (i = 0; i < insultos.length; i++) {
         if (message.content.toLowerCase().includes(insultos[i])) {
             message.channel.send({ content: `${message.author}, por favor no escribas ese tipo de groserías` })
@@ -38,7 +38,7 @@ client.on('messageCreate', async (message) => {
     }
 
     //MENSAJE TROL XD
-    if(message.content === 'vaya bot'){
+    if (message.content.includes('vaya bot')) {
         message.reply('¿Qué decis de mi? Porque siempre habláis a mi espalda ehh😡😡')
     }
 })
